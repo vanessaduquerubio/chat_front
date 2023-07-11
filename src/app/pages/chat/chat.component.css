@@ -1,0 +1,45 @@
+.titulo {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.container {
+    background-image: url('https://ar.pinterest.com/chiniii/fondos-para-whatsapp/');
+    background-color: dodgerblue;
+    height: 100vh;
+}
+
+.mensajes {
+    padding-top: 10px;
+    background-color: lightskyblue;
+    height: 80vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.alert {
+    border-radius: 20px;
+    margin-left: 10px;
+    width: 70%;
+
+}
+
+.formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn {
+    width: 90%;
+}
+
+.propio {
+    background-color: lightpink;
+    align-self: flex-end;
+    margin-right: 10px;
+
+}

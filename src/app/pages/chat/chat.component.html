@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="titulo">
+        <h1>Chat BootcamPT</h1>
+        <div>
+            <p>participantes{{numParticipantes}}</p>
+            <div>
+                <i>{{ audioOn ? '🔊' : '🔇'}}</i><input type="checkbox" [(ngModel)]="audioOn">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mensajes" #divMensajes>
+        <div class="alert alert-primary" role="alert" *ngFor="let mensaje of mensajes"
+            [ngClass]="{propio:(mensaje.socket_id=== socket.id)}">
+            <h5><strong>❤️{{mensaje.usuario}}</strong></h5>
+            <p>{{mensaje.mensaje}}</p>
+        </div>
+    </div>
+
+
+    <div class="formulario row">
+        <div class="col-4">
+            <label>usuario</label>
+            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example"
+                [(ngModel)]="data.usuario">
+        </div>
+        <div class="col-4">
+            <label>Mensaje</label>
+            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example"
+                [(ngModel)]="data.mensaje">
+        </div>
+        <div class="col-4 ">
+            <button class="btn btn-info" (click)="onClick()">Enviar</button>
+        </div>
+
+    </div>
+</div>
